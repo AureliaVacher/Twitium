@@ -1,1 +1,1 @@
-Spotify-NoAds
+Twitter client for Mac
