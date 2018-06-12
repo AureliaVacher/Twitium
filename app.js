@@ -17,7 +17,7 @@ app.on('ready', () => {
     // the saved values will now be assigned to the BrowserWindow again
     mainWindow = new BrowserWindow({
       titleBarStyle: "hidden",
-      width: 1000,
+      width: 500,
       height: 700,
     });
     const { blockWindowAds, adBlocker } = require('electron-ad-blocker');
@@ -33,7 +33,7 @@ app.on('ready', () => {
         // Check this page for rule info: https://adblockplus.org/filters.
         // This means you can also whitelist a website:
         adBlocker.parse("||whitelistwebsite.com");
-    mainWindow.loadURL("https://mobile.twitter.com/");
+    mainWindow.loadURL("file://" + __dirname + "/app/html/index.html");
 
     // You can check if the window was closed in a maximized saveState
     // If so you can maximize the BrowserWindow again
